@@ -42,4 +42,4 @@ jobs:
           cd ./linux
           git add README.md
           git commit -m "Updated README with external content"
-          git push
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/RajSDE/Linux.git
