@@ -15,13 +15,13 @@ jobs:
       - name: Checkout Linux repo
         uses: actions/checkout@v2
         with:
-          path: ./linux  # Checkout into a directory
+          path: ./linux
 
       - name: Checkout RajSDE repo
         uses: actions/checkout@v2
         with:
           repository: RajSDE/RajSDE
-          path: ./raj_sde  # Checkout into a different directory
+          path: ./raj_sde
 
       - name: List directory contents for debugging
         run: |
@@ -37,9 +37,9 @@ jobs:
       - name: Append external README to Linux README
         run: |
           cat external_readme.md >> ./linux/README.md
-          git config --global user.name "RajSDE"
-          git config --global user.email "ayerajkumar@gmail.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           cd ./linux
           git add README.md
           git commit -m "Updated README with external content"
-          git push
+          git push https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/RajSDE/Linux.git
