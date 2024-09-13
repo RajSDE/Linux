@@ -15,20 +15,31 @@ jobs:
       - name: Checkout Linux repo
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0  # Ensure the entire history is fetched
+          path: ./linux  # Checkout into a directory
+
+      - name: Checkout RajSDE repo
+        uses: actions/checkout@v2
+        with:
+          repository: RajSDE/RajSDE
+          path: ./raj_sde  # Checkout into a different directory
 
       - name: List directory contents for debugging
-        run: ls -la
+        run: |
+          echo "Linux repo contents:"
+          ls -la ./linux
+          echo "RajSDE repo contents:"
+          ls -la ./raj_sde
 
       - name: Fetch external README from RajSDE
         run: |
-          curl -o external_readme.md https://raw.githubusercontent.com/RajSDE/RajSDE/master/Readme.md
+          cp ./raj_sde/Readme.md ./external_readme.md
 
       - name: Append external README to Linux README
         run: |
-          cat external_readme.md >> ./Linux/README.md
+          cat external_readme.md >> ./linux/README.md
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add ./Linux/README.md
+          cd ./linux
+          git add README.md
           git commit -m "Updated README with external content"
           git push
