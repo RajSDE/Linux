@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: RajSDE/Linux
-          path: ./linux
+          path: ./Linux
 
       - name: Fetch external README from RajSDE
         run: |
@@ -28,3 +28,7 @@ jobs:
           git add ./Linux/README.md
           git commit -m "Updated README with external content"
           git push
+        
+      - name: List directory contents
+        run: ls -la
+
