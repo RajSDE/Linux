@@ -24,7 +24,7 @@ jobs:
 
       - name: Append external README to Linux README
         run: |
-          cat external_readme.md >> ./linux/README.md
-          git add ./linux/README.md
+          cat external_readme.md >> .Linux/README.md
+          git add ./Linux/README.md
           git commit -m "Updated README with external content"
           git push
