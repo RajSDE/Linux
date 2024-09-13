@@ -22,8 +22,6 @@ jobs:
         with:
           repository: RajSDE/RajSDE
           path: ./raj_sde
-          token: ${{ secrets.GH_TOKEN }}
-          persists-credentials: true
 
       - name: List directory contents for debugging
         run: |
