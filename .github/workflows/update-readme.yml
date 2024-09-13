@@ -1,0 +1,30 @@
+name: Update README
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '* * * * *'  # Runs daily
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Linux repo
+        uses: actions/checkout@v2
+        with:
+          repository: RajSDE/Linux
+          path: ./linux
+
+      - name: Fetch external README from RajSDE
+        run: |
+          curl -o external_readme.md https://raw.githubusercontent.com/RajSDE/RajSDE/master/Readme.md
+
+      - name: Append external README to Linux README
+        run: |
+          cat external_readme.md >> ./linux/README.md
+          git add ./linux/README.md
+          git commit -m "Updated README with external content"
+          git push
