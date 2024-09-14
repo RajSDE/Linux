@@ -14,10 +14,6 @@
 
 Hey !!!, I'm Software Development Engineer, working in Product Based MNC, I got extensive experience in Java technologies, with Spring Boot, Microservices, Rest API, Database, MySQL, Postgres, Linux, System Designing...
 
-<!-- ## My GitHub Stats ⚡ -->
-
-![Raj's GitHub stats](https://github-readme-stats.vercel.app/api?username=RajSDE&show_icons=true&count_private=true&show_icons=true&include_all_commits=true)
-
 ## Technical Skills 🎓
 #### Languages
 ![Java](https://img.shields.io/badge/java-E4E4E4?style=for-the-badge&logo=Java&logoColor=0)
