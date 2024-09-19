@@ -34,7 +34,19 @@ jobs:
         run: |
           cp ./raj_sde/Readme.md ./external_readme.md
 
-      - name: Append external README to Linux README
+      - name: Compare README files
+        id: check_readme
+        run: |
+          if cmp -s ./external_readme.md ./linux/README.md; then
+            echo "README files are identical"
+            echo "::set-output name=changed::false"
+          else
+            echo "README files are different"
+            echo "::set-output name=changed::true"
+        shell: bash
+
+      - name: Update Linux README if changed
+        if: steps.check_readme.outputs.changed == 'true'
         run: |
           cat external_readme.md > ./linux/README.md
           git config --global user.name "github-actions[bot]"
