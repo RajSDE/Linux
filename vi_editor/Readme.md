@@ -1,4 +1,48 @@
-# VI editor commands of daily use
+# `vi` or `vim` editor commands for navigation, editing, and searching:
+
+## VI editor commands of daily use
+### Navigation:
+
+* **Move to the end of a line**: Press `Shift + A` or `End`.
+* **Move to the beginning of a line**: Press `0` (zero).
+* **Move to the middle of a line**: Press `Shift + M` (works for moving to the middle of the screen vertically, but no exact mid-line navigation).
+* **Go one page down**: Press `Ctrl + F`.
+* **Go one page up**: Press `Ctrl + B`.
+* **Move to a particular line number**: Type `:<line_number>`, e.g., `:15` (to go to line 15).
+
+### Editing:
+
+* **Delete a line**: Press `dd`.
+* **Copy a line (yank)**: Press `yy`.
+* **Paste a line**: Press `p` (paste after the cursor) or `P` (paste before the cursor).
+
+### Line Numbers:
+
+* **Set line numbers**: Type `:set number` or `:set nu`.
+* **Turn off line numbers**: Type `:set nonumber`.
+
+### Search:
+
+* **Search for a word**: Press `/` followed by the word and hit Enter (e.g., `/word`).
+  * **Next match**: Press `n`.
+  * **Previous match**: Press `Shift + N`.
+
+### More Commands:
+
+* **Undo last change**: Press `u`.
+* **Redo last undone change**: Press `Ctrl + R`.
+* **Save changes**: Press `:w`.
+* **Quit vi/vim**: Press `:q`.
+* **Force quit without saving**: Press `:q!`.
+* **Save and quit**: Press `:wq` or `ZZ`.
+* **Replace a word**: `:%s/old_word/new_word/g` (global replacement across the entire file).
+* **Jump to the last position of the file**: Press `G`.
+* **Jump to the first position of the file**: Press `gg`.
+* **Insert text after the cursor**: Press `a` (append).
+
+These are some of the essential `vi` commands that will help with daily tasks.
+
+## Advance VI editor commands
 
 ### Modes
 
@@ -58,8 +102,6 @@
 * `Ctrl+v` : Start block visual mode.
 
 > These commands cover most day-to-day editing tasks in `vi` and should improve your workflow.
-
-# Advance commands of vi
 
 ### Advanced Navigation
 
