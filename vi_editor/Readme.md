@@ -1,5 +1,3 @@
-# `vi` or `vim` editor commands for navigation, editing, and searching:
-
 ## VI editor commands of daily use
 ### Navigation:
 
