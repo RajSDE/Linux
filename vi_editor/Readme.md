@@ -1,5 +1,5 @@
 ## VI editor commands of daily use
-### Navigation:
+### Navigation
 
 * **Move to the end of a line**: Press `Shift + A` or `End`.
 * **Move to the beginning of a line**: Press `0` (zero).
@@ -8,24 +8,24 @@
 * **Go one page up**: Press `Ctrl + B`.
 * **Move to a particular line number**: Type `:<line_number>`, e.g., `:15` (to go to line 15).
 
-### Editing:
+### Editing
 
 * **Delete a line**: Press `dd`.
 * **Copy a line (yank)**: Press `yy`.
 * **Paste a line**: Press `p` (paste after the cursor) or `P` (paste before the cursor).
 
-### Line Numbers:
+### Line Numbers
 
 * **Set line numbers**: Type `:set number` or `:set nu`.
 * **Turn off line numbers**: Type `:set nonumber`.
 
-### Search:
+### Search
 
 * **Search for a word**: Press `/` followed by the word and hit Enter (e.g., `/word`).
   * **Next match**: Press `n`.
   * **Previous match**: Press `Shift + N`.
 
-### More Commands:
+### More Commands
 
 * **Undo last change**: Press `u`.
 * **Redo last undone change**: Press `Ctrl + R`.
@@ -38,7 +38,7 @@
 * **Jump to the first position of the file**: Press `gg`.
 * **Insert text after the cursor**: Press `a` (append).
 
-These are some of the essential `vi` commands that will help with daily tasks.
+> These are some of the essential `vi` commands that will help with daily tasks.
 
 ## Advance VI editor commands
 
