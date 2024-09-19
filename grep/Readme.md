@@ -1,4 +1,4 @@
-## Grep comands 
+## Grep commands
 Here are some common daily use cases of the `grep` command in Linux with useful options:
 
 ### 1\. **Basic Search in a File**
@@ -6,7 +6,7 @@ Here are some common daily use cases of the `grep` command in Linux with useful 
 Search for a pattern in a file:
 
 ```bash
-bashgrep "pattern" filename
+grep "pattern" filename
 ```
 
 ### 2\. **Search Recursively in Directories**
@@ -14,7 +14,7 @@ bashgrep "pattern" filename
 Search through all files in a directory:
 
 ```bash
-bashgrep -r "pattern" /path/to/directory
+grep -r "pattern" /path/to/directory
 ```
 
 ### 3\. **Search with Case Insensitivity**
@@ -22,7 +22,7 @@ bashgrep -r "pattern" /path/to/directory
 Ignore case while searching:
 
 ```bash
-bashgrep -i "pattern" filename
+grep -i "pattern" filename
 ```
 
 ### 4\. **Display Line Numbers**
@@ -30,7 +30,7 @@ bashgrep -i "pattern" filename
 Show the line number of matching patterns:
 
 ```bash
-bashgrep -n "pattern" filename
+grep -n "pattern" filename
 ```
 
 ### 5\. **Search for Exact Word**
@@ -38,7 +38,7 @@ bashgrep -n "pattern" filename
 Search for the exact word match (not part of other words):
 
 ```bash
-bashgrep -w "word" filename
+grep -w "word" filename
 ```
 
 ### 6\. **Display Only Matching Part**
@@ -46,7 +46,7 @@ bashgrep -w "word" filename
 Show only the part of the line that matches the pattern:
 
 ```bash
-bashgrep -o "pattern" filename
+grep -o "pattern" filename
 ```
 
 ### 7\. **Search for Multiple Patterns**
@@ -54,7 +54,7 @@ bashgrep -o "pattern" filename
 Use the `-e` option to search for multiple patterns:
 
 ```bash
-bashgrep -e "pattern1" -e "pattern2" filename
+grep -e "pattern1" -e "pattern2" filename
 ```
 
 ### 8\. **Count Occurrences**
@@ -62,7 +62,7 @@ bashgrep -e "pattern1" -e "pattern2" filename
 Count the number of lines that match the pattern:
 
 ```bash
-bashgrep -c "pattern" filename
+grep -c "pattern" filename
 ```
 
 ### 9\. **Invert Match**
@@ -70,7 +70,7 @@ bashgrep -c "pattern" filename
 Show lines that do not match the pattern:
 
 ```bash
-bashgrep -v "pattern" filename
+grep -v "pattern" filename
 ```
 
 ### 10\. **Show Context Lines**
@@ -78,7 +78,7 @@ bashgrep -v "pattern" filename
 Show lines before and after the matching pattern:
 
 ```bash
-bashgrep -A 3 -B 2 "pattern" filename   # 3 lines after, 2 lines before
+grep -A 3 -B 2 "pattern" filename   # 3 lines after, 2 lines before
 ```
 
 ### 11\. **Show Only File Names**
@@ -86,7 +86,7 @@ bashgrep -A 3 -B 2 "pattern" filename   # 3 lines after, 2 lines before
 List only the names of files that contain the match:
 
 ```bash
-bashgrep -l "pattern" /path/to/directory/*
+grep -l "pattern" /path/to/directory/*
 ```
 
 ### 12\. **Using with Pipelines**
@@ -102,7 +102,7 @@ bashls -l | grep "pattern"
 Exclude specific files when searching:
 
 ```bash
-bashgrep --exclude="*.log" -r "pattern" /path/to/directory
+grep --exclude="*.log" -r "pattern" /path/to/directory
 ```
 
 ### 14\. **Using Regular Expressions**
@@ -110,7 +110,7 @@ bashgrep --exclude="*.log" -r "pattern" /path/to/directory
 You can use extended regex with `-E`:
 
 ```bash
-bashgrep -E "pattern1|pattern2" filename
+grep -E "pattern1|pattern2" filename
 ```
 
 These options and use cases will help you handle most of your daily tasks efficiently with `grep`.
